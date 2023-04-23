@@ -1,0 +1,19 @@
+# Options used by the localizations tool
+## `arb-dir` sets the input directory. The output directory will match
+## the input directory if the output directory is not set.
+arb-dir: lib/l10n
+## `template-arb-file` describes the template arb file that the tool
+## will use to check and validate the remaining arb files when
+## generating Flutter's localization files.
+template-arb-file: messages_en.arb
+## `output-localization-file` is the name of the generated file.
+output-localization-file: translations.dart
+untranslated-messages-file: missing_translationsq.text
+## `output-class` is the name of the localizations class your
+## Flutter application will use. The file will need to be
+## imported throughout your application.
+output-class: Translations
+## setting `nullable-getter` to false generates a non-nullable
+## StockStrings getter. This removes the need for adding null checks
+## in the Flutter application itself.
+nullable-getter: false
